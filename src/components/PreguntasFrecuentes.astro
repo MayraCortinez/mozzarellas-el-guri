@@ -1,0 +1,58 @@
+---
+// Componente de Preguntas Frecuentes (Acordeón HTML Nativo sin JavaScript)
+const faqs = [
+  {
+    pregunta: "¿Cuál es el mínimo de compra para solicitar el reparto mayorista?",
+    respuesta: "Nos adaptamos a la escala operativa de su negocio. Coordinamos entregas y despachos programados a partir de solo 10 kg."
+  },
+  {
+    pregunta: "¿Cuáles son las zonas de cobertura y frecuencias de entrega?",
+    respuesta: "A través de nuestra flota de logística propia y puntos fijos en el Área Metropolitana de Buenos Aires (AMBA), cubrimos de forma regular Capital Federal, Gran Buenos Aires, la Costa Atlántica y zonas de influencia de la cuenca lechera. Las frecuencias se coordinan semanalmente según el volumen del comercio."
+  },
+  {
+    pregunta: "¿Cuáles son las formas de pago disponibles para los despachos?",
+    respuesta: "Aceptamos transferencias bancarias directas, pagos digitales mediante Mercado Pago o efectivo, contra entrega al momento de recibir la mercadería en su local."
+  }
+];
+---
+
+<section class="py-20 px-4 bg-blue-100/20 text-white border-b border-stone-200/60">
+  <div class="max-w-3xl mx-auto space-y-12">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="text-center max-w-2xl mx-auto space-y-4">
+      <span class="text-brand-titulos text-xs font-bold uppercase tracking-widest bg-brand-azul/5 px-4 py-2 rounded-full">
+        Despeje sus Dudas
+      </span>
+      <h2 class="text-3xl font-black text-brand-titulos text-shadow-brand-titulos tracking-tight pt-2 sm:text-4xl">
+        Preguntas Frecuentes
+      </h2>
+
+    </div>
+
+    <!-- Lista de Acordeones Semánticos -->
+    <div class="space-y-4 pt-4">
+      {faqs.map((faq) => (
+        <details class="group bg-white border border-stone-200/80 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:border-stone-300 select-none shadow-sm">
+          
+          <!-- Encabezado del Acordeón (Interactivo de forma nativa) -->
+          <summary class="flex items-center justify-between text-base font-bold text-stone-800 focus:outline-none list-none">
+            <span class="pr-4 text-brand-texto leading-tight">{faq.pregunta}</span>
+            <div class="w-7 h-7 bg-brand-azul/5 rounded-xl border border-brand-azul/10 flex items-center justify-center text-brand-azul shrink-0 transition-transform duration-300 group-open:rotate-180">
+              <svg xmlns="http://w3.org" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </summary>
+
+          <!-- Contenido del Acordeón (Desplegable) -->
+          <div class="mt-4 pt-4 border-t border-stone-100 text-sm text-brand-titulos leading-relaxed">
+            <p>{faq.respuesta}</p>
+          </div>
+
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>

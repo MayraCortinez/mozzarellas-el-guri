@@ -1,15 +1,46 @@
-<!doctype html>
-<html lang="en">
+---
+// Layout global para Muzzarellas El Guri - Configuración SEO B2B Neutra
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+}
+
+const { title = "Muzzarella El Guri | Distribución Mayorista Directa de Fábrica" } = Astro.props;
+const description = "Más de 20 años de trayectoria abasteciendo al sector gastronómico desde la cuenca lechera de Buenos Aires. Despachos programados a partir de solo 10 kg.";
+const siteUrl = "https://muzzarellaselguri.com.ar"; // Cambiar por el dominio final
+const ogImage = "/images/og-share-el-guri.jpg"; // Imagen que se mostrará en WhatsApp
+---
+
+<!DOCTYPE html>
+<html lang="es">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<!-- SEO Estándar -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / WhatsApp / Facebook (SEO Neutro y Comercial) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:title" content="Muzzarella El Guri | Distribución Mayorista" />
+		<meta property="og:description" content="Rendimiento profesional directo de fábrica para su comercio. Envíos programados en AMBA, Capital y la Costa. Envíos desde 10 kg." />
+		<meta property="og:image" content={ogImage} />
+
+		<!-- Fuentes de Google Fonts (Tipografía Outfit: Redondeada, Moderna y Limpia) -->
+		<link rel="preconnect" href="https://googleapis.com">
+		<link rel="preconnect" href="https://gstatic.com" crossorigin>
+		<link href="https://googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 	</head>
-	<body>
+	<body class="bg-brand-fondo font-['Outfit',sans-serif] min-h-screen text-stone-900 selection:bg-brand-azul/10 selection:text-brand-azul antialiased">
+		
 		<slot />
+
 	</body>
 </html>
 

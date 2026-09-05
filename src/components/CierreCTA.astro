@@ -1,0 +1,73 @@
+---
+// Componente Unificado: Re-CTA de Conversión, Botón Flotante y Footer B2B
+const whatsappNumber = "5491124272121";
+const message = "Hola! Vi la página web de Muzzarellas El Guri y quiero consultar por reparto mayorista para un comercio.";
+const whatsappUrl = `https://wa.me{whatsappNumber}?text=${encodeURIComponent(message)}`;
+---
+
+<!-- 1. BLOQUE DE RE-CONVERSIÓN FINAL (RE-CTA) -->
+<section class="py-20 px-4 bg-brand-titulos text-center border-b border-stone-200/60">
+  <div class="max-w-3xl mx-auto space-y-6">
+    <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">
+      ¿Momento de mejorar su abastecimiento?
+    </h2>
+    <p class="text-base sm:text-lg text-white max-w-xl mx-auto leading-relaxed">
+      Consulte hoy por el servicio de reparto regular para su comercio y asegure stock directo de fábrica, <strong class="text-white font-black">desde solo 10 kg por despacho</strong>.
+    </p>
+    <div class="pt-4">
+ <a 
+  href="https://wa.me." 
+  class="relative inline-flex items-center justify-center bg-brand-whatsapp text-white px-8 py-4 rounded-2xl
+         /* TIPOGRAFÍA REFINADA: Peso firme pero elegante, espaciado entre letras premium */
+         font-bold text-base sm:text-lg tracking-wide font-['Outfit',sans-serif]
+         /* Capa 3D: Volumen físico calibrado */
+         shadow-[0_5px_0_0_#1e9e4f,0_12px_25px_rgba(37,211,102,0.22)] 
+         /* Biselado de luz superior */
+         border-t border-white/25 
+         /* Comportamiento táctil fluido (Efecto hundido) */
+         transition-all duration-150 ease-out
+         hover:translate-y-px hover:shadow-[0_4px_0_0_#1e9e4f,0_10px_18px_rgba(37,211,102,0.18)]
+         active:translate-y-1.25 active:shadow-[0_0_0_0_#1e9e4f,0_0_0_rgba(0,0,0,0)]"
+>
+  <!-- Reflejo de luz cristalino -->
+  <span class="absolute inset-0 bg-linear-to-b from-white/12 to-transparent rounded-2xl pointer-events-none"></span>
+  
+  <span class="relative z-10 flex items-center gap-2">
+    Coordinemos
+    <svg xmlns="http://w3.org" class="w-5 h-5 sm:w-6 sm:h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.474 4.825 1.474 5.433 0 9.85-4.414 9.853-9.847.002-2.63-1.023-5.101-2.886-6.968-1.863-1.867-4.332-2.895-6.964-2.896-5.436 0-9.854 4.415-9.856 9.849-.001 1.654.45 3.226 1.302 4.567L1.879 21.092l4.768-1.938z"/>
+    </svg>
+  </span>
+</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- 2. BOTÓN FLOTANTE FIJO DE WHATSAPP (UI ACCESSIBILITY) -->
+<div class="fixed bottom-6 right-6 z-50 animate-float">
+<div class="fixed bottom-6 right-6 z-50">
+  <a 
+    href="https://wa.me."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp mayorista"
+    class="relative flex items-center justify-center w-14 h-14 bg-brand-azul text-white rounded-2xl
+           /* Sombra 3D en el azul institucional */
+           shadow-[0_4px_0_0_#00335c,0_10px_20px_rgba(0,75,135,0.2)]
+           border-t border-white/20
+           transition-all duration-150 ease-out
+           hover:translate-y-px hover:shadow-[0_3px_0_0_#00335c,0_8px_15px_rgba(0,75,135,0.15)]
+           active:translate-y-1 active:shadow-[0_0_0_0_#00335c,0_0_0_rgba(0,0,0,0)]"
+  >
+    <span class="absolute inset-0 bg-linear-to-b from-white/25 to-transparent rounded-2xl pointer-events-none"></span>
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+</svg>
+
+  </a>
+</div>
+
+</div>
+
+

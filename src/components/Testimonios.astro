@@ -1,0 +1,111 @@
+---
+// Componente de Testimonios: Carrusel con Dots Reactivos Nativos
+const testimonios = [
+  {
+    id: "test-0",
+    comentario: "Excelente rendimiento en el horno de piso. El hilado es constante, no se quema y rinde notablemente más por horma.",
+    origen: "Establecimiento Gastronómico"
+  },
+  {
+    id: "test-1",
+    comentario: "Poder pedir desde 10 kg con reparto directo nos solucionó la logística. Ya no tenemos que congelar capital en stock masivo.",
+    origen: "Comercio de Despacho"
+  },
+  {
+    id: "test-2",
+    comentario: "La regularidad del reparto semanal nos devolvió el orden operativo. Mercadería habilitada y con stock permanente siempre.",
+    origen: "Servicio de Catering"
+  }
+];
+---
+
+<section class="py-(--space-section) px-4 bg-brand-fondo border-b border-stone-200/60">
+  <div class="max-w-5xl mx-auto space-y-10">
+    
+    <!-- Encabezado Limpio -->
+    <div class="text-center mx-auto max-w-xl">
+      <h2 class="text-3xl mx-auto font-black tracking-tight sm:text-4xl text-brand-titulos">
+        Más de 20 años sumando valor a nuestros clientes
+      </h2>
+    </div>
+
+    <!-- Carrusel Horizontal con Snap Scroll Nativo -->
+    <div id="carousel-testimonios" class="flex gap-6 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scroll-smooth scrollbar-none w-full md:grid md:grid-cols-3 md:overflow-visible">
+      {testimonios.map((item) => (
+        <div 
+          id={item.id}
+          data-slide
+          class="bg-white border border-stone-200/60 rounded-4xl p-6 md:p-8 flex flex-col justify-between shadow-xs 
+                 w-[86%] sm:w-[46%] md:w-auto snap-start shrink-0"
+        >
+          <p class="text-brand-texto text-base font-medium leading-relaxed tracking-tight">
+            “{item.comentario}”
+          </p>
+          
+          <div class="flex items-center gap-2 pt-4 mt-6 border-t border-stone-100">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-azul shrink-0"></span>
+            <p class="text-[11px] font-black text-stone-400 uppercase tracking-wider">
+              {item.origen}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Indicadores de navegación visual reactivos (Dots) - Ocultos en desktop -->
+    <div class="flex justify-center gap-2.5 mt-2 md:hidden">
+      <span data-dot class="w-2.5 h-2.5 rounded-full bg-brand-azul transition-all duration-300"></span>
+      <span data-dot class="w-2.5 h-2.5 rounded-full bg-stone-200 transition-all duration-300"></span>
+      <span data-dot class="w-2.5 h-2.5 rounded-full bg-stone-200 transition-all duration-300"></span>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Limpieza de barras de scroll */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  // Lógica de Reactividad con Intersection Observer Nativo (v4 compatible)
+  const carousel = document.getElementById('carousel-testimonios');
+  const slides = document.querySelectorAll('[data-slide]');
+  const dots = document.querySelectorAll('[data-dot]');
+
+  if (carousel && slides.length && dots.length) {
+    const observerOptions = {
+      root: carousel, // Observa la visibilidad DENTRO del contenedor del carrusel
+      threshold: 0.6  // Se activa cuando el 60% de la tarjeta es visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Obtener el índice numérico desde el ID (ej: "test-1" -> 1)
+          const index = parseInt(entry.target.id.split('-')[1]);
+          
+          // Actualizar las clases de los dots de forma dinámica
+          dots.forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.remove('bg-stone-200');
+              dot.classList.add('bg-brand-azul');
+            } else {
+              dot.classList.remove('bg-brand-azul');
+              dot.classList.add('bg-stone-200');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    // Registrar cada tarjeta en el observador
+    slides.forEach((slide) => observer.observe(slide));
+  }
+</script>

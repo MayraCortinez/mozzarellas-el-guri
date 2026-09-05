@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta de Colores de Muzzarellas El Guri */
+  --color-brand-fondo: #FDFBF7;
+  --color-brand-azul: #004B87;
+  --color-brand-rojo: #9B1C1C;
+  --color-brand-verde: #15803D;
+  --color-brand-whatsapp: #113114;
+
+   /* NUEVA VARIABLE DE ENFOQUE TIPOGRÁFICO PREMIUM */
+  --color-brand-titulos: #05112C; /* Azul marino profundo ultra elegante */
+
+  /*Color texto */
+  --color-brand-texto: #010A1F;
+  /* VARIABLES DE DISEÑO RESPONSIVAS Y FLUIDAS (UX Optimizado) */
+  /* --space-section: Controla los paddings de los bloques para evitar scrolls eternos */
+  --space-section: clamp(2.5rem, 5vw, 5rem);
+  
+  /* --text-hero-title: El título se agranda en desktop y se compacta en celus chicos automáticamente */
+  --text-hero-title: clamp(2rem, 6vw, 3.75rem);
+
+  /* Animaciones CSS Nativas */
+  --animation-float: float 4s ease-in-out infinite;
+  --animation-shadow: shadow 4s ease-in-out infinite;
+  --animation-marquee: marquee 25s linear infinite;
+}
+
+/* @keyframes para el Queso Flotante del Hero */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); } /* Movimiento más corto para mobile */
+}
+
+/* @keyframes para la Sombra Dinámica del Hero */
+@keyframes shadow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* @keyframes para el Carrusel Infinito */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 8px)); }
+}

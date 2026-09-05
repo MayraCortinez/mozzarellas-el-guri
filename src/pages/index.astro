@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Página Principal de Muzzarellas El Guri
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import QuienesSomos from '../components/QuienesSomos.astro';
+import Sucursales from '../components/Sucursales.astro';
+import TablaComparativa from '../components/TablaComparativa.astro';
+import Testimonios from '../components/Testimonios.astro';
+import PreguntasFrecuentes from '../components/PreguntasFrecuentes.astro';
+import CierreCTA from '../components/CierreCTA.astro';
+import Catalogo from '../components/Catalogo.astro';
+import Footer from '../components/Footer.astro';
+
+// Nota: A medida que creemos los demás componentes (Hero, QuienesSomos, etc.), los iremos importando acá.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Muzzarella El Guri | Rendimiento Directo de Fábrica">
+	<main class="overflow-x-hidden">
+		
+		<Header />
+		<!-- 1. HERO SECTION -->
+		<Hero />
+
+		<!-- 2. QUIÉNES SOMOS (Historia y Logística) -->
+		<QuienesSomos />
+
+		<!-- 3. CATÁLOGO MULTIMARCA REDISEÑADO -->
+		<Catalogo />
+
+		<Sucursales />
+		<!-- 4. TABLA COMPARATIVA B2B -->
+		<TablaComparativa />
+
+		<!-- 5. TESTIMONIOS (Fórmula Resultado + Impacto) -->
+		<Testimonios />
+
+		<!-- 6. PREGUNTAS FRECUENTES -->
+		<PreguntasFrecuentes />
+
+		<!-- 7. CIERRE RE-CTA + FOOTER -->
+		<CierreCTA />
+
+		<Footer />
+	</main>
 </Layout>
