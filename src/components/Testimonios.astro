@@ -19,12 +19,12 @@ const testimonios = [
 ];
 ---
 
-<section class="py-(--space-section) px-4 bg-brand-fondo border-b border-stone-200/60">
+<section class="py-(--space-section) px-4 border-b border-stone-200/60">
   <div class="max-w-5xl mx-auto space-y-10">
     
     <!-- Encabezado Limpio -->
     <div class="text-center mx-auto max-w-xl">
-      <h2 class="text-3xl mx-auto font-black tracking-tight sm:text-4xl text-brand-titulos">
+      <h2 class="text-3xl mx-auto font-black tracking-tight sm:text-4xl text-brand-titulos text-shadow-brand-titulos">
         Más de 20 años sumando valor a nuestros clientes
       </h2>
     </div>
@@ -35,10 +35,10 @@ const testimonios = [
         <div 
           id={item.id}
           data-slide
-          class="bg-white border border-stone-200/60 rounded-4xl p-6 md:p-8 flex flex-col justify-between shadow-xs 
+          class="bg-gradient-radial-azul border border-stone-200/60 rounded-4xl p-6 md:p-8 flex flex-col justify-between shadow-gourmet 
                  w-[86%] sm:w-[46%] md:w-auto snap-start shrink-0"
         >
-          <p class="text-brand-texto text-base font-medium leading-relaxed tracking-tight">
+          <p class="text-white text-base font-medium leading-relaxed">
             “{item.comentario}”
           </p>
           
