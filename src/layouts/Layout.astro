@@ -7,13 +7,13 @@ interface Props {
 }
 
 const { title = "Muzzarella El Guri | Distribución Mayorista Directa de Fábrica" } = Astro.props;
-const description = "Más de 20 años de trayectoria abasteciendo al sector gastronómico desde la cuenca lechera de Buenos Aires. Despachos programados a partir de solo 10 kg.";
-const siteUrl = "https://muzzarellaselguri.com.ar"; // Cambiar por el dominio final
+const description = "Más de 20 años de trayectoria abasteciendo al sector mayorista desde la cuenca lechera de Buenos Aires. Despachos programados a partir de solo 10 kg.";
+const siteUrl = "https://mozzarella-el-guri.netlify.app/"; // Cambiar por el dominio final
 const ogImage = "/images/og-share-el-guri.jpg"; // Imagen que se mostrará en WhatsApp
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,9 @@ const ogImage = "/images/og-share-el-guri.jpg"; // Imagen que se mostrará en Wh
 		<meta property="og:title" content="Muzzarella El Guri | Distribución Mayorista" />
 		<meta property="og:description" content="Rendimiento profesional directo de fábrica para su comercio. Envíos programados en AMBA, Capital y la Costa. Envíos desde 10 kg." />
 		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/jpeg" />
 
 		<!-- Fuentes de Google Fonts (Tipografía Outfit: Redondeada, Moderna y Limpia) -->
 		<link rel="preconnect" href="https://googleapis.com">
