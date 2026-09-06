@@ -1,8 +1,31 @@
 ---
-// Componente de Especificaciones Técnicas B2B: Atributos y Rendimiento Gastronómico de la Receta
+// Componente de Especificaciones Técnicas B2B: Optimizado con Datos e Iteración Novedosa
+const especificaciones = [
+  {
+    titulo: "Comportamiento ante el calor",
+    tituloMobile: "Comportamiento ante el calor",
+    detalle: "Hilado uniforme que tolera altas temperaturas."
+  },
+  {
+    titulo: "Retención de líquido y suero",
+    tituloMobile: "Retención de líquido",
+    detalle: "Fusión seca óptima. Mantiene la grasa láctea sin liberar agua."
+  },
+  {
+    titulo: "Porcentaje de elasticidad",
+    tituloMobile: "Porcentaje de elasticidad",
+    detalle: "Máximo estiramiento. Cobertura completa consistente."
+  },
+  {
+    titulo: "Estructura de la materia prima",
+    tituloMobile: "Estructura de materia prima",
+    detalle: "100% Leche entera seleccionada."
+  }
+];
 ---
+
 <section class="py-(--space-section) px-4 bg-brand-fondo text-brand-titulos border-b border-stone-200/60">
-  <div class="max-w-3xl mx-auto ">
+  <div class="max-w-3xl mx-auto space-y-10">
     
     <!-- Encabezado Corto y Directo -->
     <div class="text-center max-w-xl m-auto">
@@ -14,64 +37,48 @@
       </p>
     </div>
 
-    <!-- Estructura de Matriz Técnica Unificada (Altamente Estética y Armónica) -->
+    <!-- Estructura de Matriz Técnica Unificada (Limpia sin Código Repetido) -->
     <div class="overflow-hidden rounded-4xl border border-stone-200/80 shadow-xs bg-white">
-      <table class="w-auto text-left border-collapse">
+      <table class="w-full text-left border-collapse">
         <thead>
-          <tr class="bg-stone-50/70 border-b border-stone-200 h-full">
-            <th class="p-5 text-xs font-black text-stone-400 uppercase tracking-wider w-1/3">Factor de Rendimiento</th>
-            <th class="p-5 text-xs font-black text-brand-azul uppercase tracking-wider bg-brand-azul/5 w-1/3">Nuestra Receta</th>
+          <tr class="bg-stone-50/70 border-b border-stone-200">
+            <th class="hidden md:table-cell p-5 text-xs font-black text-stone-400 uppercase tracking-wider w-1/3">
+              Factor de Rendimiento
+            </th>
+            <th class="p-5 text-xs font-black text-brand-azul uppercase tracking-wider bg-brand-azul/5 w-full md:w-2/3">
+              Nuestra Receta
+            </th>
           </tr>
         </thead>
         <tbody class="divide-y divide-stone-100 text-sm sm:text-base">
           
-          <tr class="group hover:bg-stone-50/40 transition-colors">
-            <td class="p-5 font-bold text-brand-titulos tracking-tight">Comportamiento ante el calor</td>
-            <td class="p-5 w-fit font-medium text-stone-700 bg-brand-azul/5">
-               <span class="text-brand-titulos font-black inline-flex flex-row-reverse items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-</svg>
-Hilado uniforme </span>
-            </td>
-          </tr>
-
-          <tr class="group hover:bg-stone-50/40 transition-colors">
-            <td class="p-5 font-bold text-brand-titulos tracking-tight">Retención de líquido y suero</td>
-            <td class="p-5 text-stone-700 bg-brand-azul/5">
-               <span class="text-brand-titulos font-black inline-flex items-center gap-2 flex-row-reverse">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-</svg> Fusión seca óptima</span>.
-            </td>
-          </tr>
-
-          <tr class="group hover:bg-stone-50/40 transition-colors">
-            <td class="p-5 font-bold text-brand-titulos tracking-tight">Porcentaje de elasticidad</td>
-            <td class="p-5 font-medium text-stone-700 bg-brand-azul/5">
-               <span class="text-brand-titulos font-black inline-flex items-center gap-2 flex-row-reverse">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-</svg>
-
-                Estiramiento máximo</span>. 
-            </td>
-          </tr>
-
-          <tr class="group hover:bg-stone-50/40 transition-colors">
-            <td class="p-5 font-bold text-brand-titulos tracking-tight">Estructura de la materia prima</td>
-            <td class="p-5 font-medium text-stone-700 bg-brand-azul/5">
-               <span class="text-brand-titulos font-black inline-flex items-center gap-2 flex-row-reverse">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-</svg>
-
-
-                Leche seleccionada</span> 
-            </td>
-          </tr>
-
-     
+          {especificaciones.map((item) => (
+            <tr class="group hover:bg-stone-50/40 transition-colors h-full">
+              <!-- Celda Izquierda Desktop -->
+              <td class="hidden md:table-cell p-5 font-bold text-brand-titulos tracking-tight w-1/3 align-middle">
+                {item.titulo}
+              </td>
+              
+              <!-- Celda Derecha Líquida (Mobile y Desktop) -->
+              <td class="bg-brand-azul/5 w-full md:w-2/3 p-0 align-stretch">
+                <div class="flex justify-between items-center w-full h-full p-5 gap-4">
+                  <span class="text-stone-700 font-medium">
+                    <strong class="text-brand-titulos font-black md:hidden block mb-1">
+                      {item.tituloMobile}
+                    </strong>
+                    {item.detalle}
+                  </span>
+                  
+                  <!-- Ícono de Checklist Blindado contra Aplastamiento -->
+                  <span class="text-brand-azul inline-flex items-center justify-center w-5 h-5 shrink-0">
+                    <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                    </svg>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          ))}
 
         </tbody>
       </table>
