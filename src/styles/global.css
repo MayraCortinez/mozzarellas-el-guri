@@ -6,6 +6,7 @@
   --color-brand-azul: #004B87;
   --color-brand-rojo: #9B1C1C;
   --color-brand-verde: #15803D;
+    --color-brand-amarillo: #E17E23;
   --color-brand-whatsapp: #113114;
 
    /* NUEVA VARIABLE DE ENFOQUE TIPOGRÁFICO PREMIUM */
@@ -76,10 +77,14 @@
 /* 2. Degradado Radial Lácteo desde el Centro en tonos de Azul */
 /* Va desde un azul marino profundo hacia un azul cobalto lavado, ideal para fondos */
 .bg-gradient-radial-azul {
-  background-image: radial-gradient(circle at center, #0a1e46 0%, #05112c 70%, #020919 100%);
+  background-image: radial-gradient(circle at center, #36395a 0%, #0c112dfa 70%, #05112C 100%);
+}
+
+.bg-gradient-azul {
+  background-image: radial-gradient(circle at center, #000325cc 0%, #0e0e24e2 70%, #040224 100%);
 }
 
 /* Variante alternativa: Degradado Radial sutil e iluminado sobre fondo crema */
 .bg-glow-azul {
-  background-image: radial-gradient(circle at center, rgba(0, 75, 135, 0.06) 0%, rgba(0, 75, 135, 0) 70%);
+  background-image: radial-gradient(circle at center, #05112c49 0%, rgba(175, 216, 250, 0.197) 70%, rgba(213, 236, 254, 0.126) 100%);
 }
