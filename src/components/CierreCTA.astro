@@ -1,12 +1,16 @@
 ---
 // Componente Unificado: Re-CTA de Conversión, Botón Flotante y Footer B2B
-const whatsappNumber = "5491124272121";
-const message = "Hola! Vi la página web de Muzzarellas El Guri y quiero consultar por reparto mayorista para un comercio.";
-const whatsappUrl = `https://wa.me{whatsappNumber}?text=${encodeURIComponent(message)}`;
+// Declaramos las variables libres (Sin meterlas adentro de una funciónonSubmit)
+const whatsappNumber = '5491124272121'; 
+const message = 'Hola! Vi la página web de Muzzarellas El Guri y quiero consultar por una cotización mayorista para mi negocio.';
+
+// Concatenamos usando la misma sintaxis de backticks y encodeURIComponent de tu código
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 ---
 
 <!-- 1. BLOQUE DE RE-CONVERSIÓN FINAL (RE-CTA) -->
-<section class="py-20 px-4 bg-gradient-radial-azul text-center border-b border-stone-200/60">
+<section id="cierre" class="py-20 px-4 bg-gradient-radial-azul text-center border-b border-stone-200/60">
   <div class="max-w-3xl mx-auto space-y-6">
     <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">
       ¿Momento de mejorar su abastecimiento?
@@ -16,7 +20,9 @@ const whatsappUrl = `https://wa.me{whatsappNumber}?text=${encodeURIComponent(mes
     </p>
     <div class="pt-4">
  <a 
-  href="https://wa.me." 
+  href= {whatsappUrl}
+  target="_blank" 
+  rel="noopener noreferrer" 
   class="relative inline-flex items-center justify-center bg-brand-whatsapp text-white px-8 py-4 rounded-2xl
          /* TIPOGRAFÍA REFINADA: Peso firme pero elegante, espaciado entre letras premium */
          font-bold text-base sm:text-lg tracking-wide font-['Outfit',sans-serif]
@@ -48,7 +54,7 @@ const whatsappUrl = `https://wa.me{whatsappNumber}?text=${encodeURIComponent(mes
 <div class="fixed bottom-6 right-6 z-50 animate-float">
 <div class="fixed bottom-6 right-6 z-50">
   <a 
-    href="https://wa.me."
+    href= {whatsappUrl}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contactar por WhatsApp mayorista"

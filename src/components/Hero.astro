@@ -1,3 +1,12 @@
+---
+const whatsappNumber = '5491124272121'; 
+const message = 'Hola! Vi la página web de Muzzarellas El Guri y quiero consultar por una cotización mayorista para mi negocio gastronómico.';
+
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+---
+
+
 <section class="overflow-hidden bg-blue-50 sm:grid sm:grid-cols-2 py-16 items-center relative">
   <div class="p-8 md:p-12 lg:px-16 lg:py-24">
     <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
@@ -19,7 +28,9 @@
         <!-- BOTÓN DESKTOP: Se oculta en mobile (hidden) y aparece en computadoras (md:inline-flex) -->
         <div class="pt-4 hidden md:block">
           <a 
-            href="https://wa.me." 
+             href={whatsappUrl}
+             target="_blank"
+  |||||||||||rel="noopener noreferrer"
             class="relative inline-flex items-center justify-center bg-brand-titulos text-white px-8 py-4 rounded-2xl
                    font-bold text-base sm:text-lg tracking-wide font-['Outfit',sans-serif]
                    shadow-[0_4px_0_0_#00335c,0_10px_20px_rgba(0,75,135,0.2)]
@@ -45,9 +56,10 @@
   <!-- COLUMNA DERECHA (Contenedor de Imagen + Sombra) -->
   <div class="relative w-full h-full sm:h-full flex items-center justify-center">
     <img
+    id="queso-hero"
       alt="Queso Muzzarella El Guri"
-      src="images/5.png"
-      class="w-full h-full object-contain max-w-7xl sm:max-w-md animate-float drop-shadow-[0_20px_30px_rgba(0,0,0,0.12)] relative z-10"
+      src="/images/6.webp"
+    class="w-full h-full object-contain max-w-70 sm:max-w-md animate-float drop-shadow-[0_25px_40px_rgba(0,0,0,0.14)] relative z-10 will-change-transform"
     />
     <!-- Sombra responsiva colocada de forma absoluta abajo de la foto -->
     <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-2/3 max-w-70 h-2.5 bg-stone-900/10 rounded-full blur-md animate-shadow"></div>
@@ -74,3 +86,17 @@
   </div>
 
 </section>
+<script>
+  // Script de Parallax suave y ultra-liviano para el elemento del Hero
+  const queso = document.getElementById('queso-hero');
+  
+  if (queso && window.innerWidth >= 768) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+       if (scrolled < 800) {
+      // Multiplicamos por 0.12 para que el movimiento sea sutil, fino y elegante
+      queso.style.transform = `translateY(${scrolled * -0.20}px)`;
+       }
+    });
+  }
+</script>
