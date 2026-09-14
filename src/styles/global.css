@@ -88,3 +88,19 @@
 .bg-glow-azul {
   background-image: radial-gradient(circle at center, #05112c49 0%, rgba(175, 216, 250, 0.197) 70%, rgba(213, 236, 254, 0.126) 100%);
 }
+
+/* Clase de Reacción Táctil Inmediata Universal (Mobile & Desktop) */
+.btn-click-feedback {
+  /* Transición ultra veloz acelerada por hardware */
+  transition: transform 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.08s ease-in-out, 
+              background-color 0.1s ease-in-out;
+  will-change: transform, box-shadow;
+}
+
+/* Efecto de hundimiento físico inmediato al presionar o tocar */
+.btn-click-feedback:active {
+  transform: scale(0.96) translateY(2px) !important;
+  box-shadow: 0 0 0 0 transparent !important;
+  filter: brightness(0.93);
+}

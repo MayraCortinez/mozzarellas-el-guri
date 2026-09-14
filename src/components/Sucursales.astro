@@ -3,17 +3,21 @@
 const sucursales = [
   {
    nombre: "Centros de Distribución Mayorista (Capital Federal)",
-    direccion: "Bermúdez 1330 | Magariños Cervantes 4448, CABA",
+    direccion: "Bermúdez 1330, C1407, CABA",
+    direccion2: "Alejandro Magariños Cervantes 4448, C1407, CABA",
+    mapaUrl: "https://maps.app.goo.gl/x13Ro3go8bv4TbyU9",
+    mapaUrl2: "https://maps.app.goo.gl/GwDtzaswTpEdhnSh9",
     detalle: "Nuestra base logística principal y depósito central de abastecimiento gastronómico.",
     horario: "Lunes a Viernes de 06:00 a 14:00 hs",
-    imagen: "/images/13.webp" // Puedes usar una foto limpia de cajas/logística
+    imagen: "/images/13.webp" // Puedes usar una foto limpia de cajas/logística,
   },
   {
     nombre: "Punto de Venta Pablo Nogués",
-    direccion: "Av. Sesquicentenario 3067, Pablo Nogués",
+    direccion: "Av. del Sesquicentenario 3067, B1613 Los Polvorines, Provincia de Buenos Aires",
     detalle: "Local comercial de atención directa, fiambrería y retiro mayorista de mercadería.",
     horario: "Lunes a Sábado de 08:00 a 20:00 hs",
-    imagen: "/images/14.webp"
+    imagen: "/images/14.webp",
+    mapaUrl: "https://maps.app.goo.gl/VvttbTAthgh1HPLk8"
   }
 ];
 ---
@@ -51,9 +55,31 @@ const sucursales = [
           <div class="p-6 md:p-8 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <h3 class="text-xl font-black text-brand-titulos tracking-tight">{suc.nombre}</h3>
-              <p class="text-sm text-stone-600 leading-relaxed font-medium">📍 {suc.direccion}</p>
+              { suc.direccion2 ? (
+                <a href={suc.mapaUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-click-feedback inline-flex items-center gap-1.5 text-[11px] font-black text-brand-titulos tracking-wider bg-brand-texto/5 hover:bg-brand-titulos/10 px-3 py-1.5 rounded-xl"
+                >
+                  <p class="text-sm text-stone-600 leading-relaxed font-medium">📍 {suc.direccion}</p>
+                </a>
+                <a href={suc.mapaUrl2}
+                   target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-click-feedback inline-flex items-center gap-1.5 text-[11px] font-black text-brand-titulos tracking-wider bg-brand-texto/5 hover:bg-brand-titulos/10 px-3 py-1.5 rounded-xl"
+                >
+                  <p class="text-sm text-stone-600 leading-relaxed font-medium">📍 {suc.direccion2}</p>
+                </a>
+              ) : (
+                <a href={suc.mapaUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-click-feedback inline-flex items-center gap-1.5 text-[11px] font-black text-brand-titulos tracking-wider bg-brand-texto/5 hover:bg-brand-titulos/10 px-3 py-1.5 rounded-xl"
+                >
+                  <p class="text-sm text-stone-600 leading-relaxed font-medium">📍 {suc.direccion}</p>
+                </a>
+              )}
             </div>
-
           </div>
 
         </div>
