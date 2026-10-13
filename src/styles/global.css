@@ -105,6 +105,12 @@
   filter: brightness(0.93);
 }
 
-.nl-badge #nl-badge{
+/* Oculta el contenedor completo del badge de Netlify y la tarjeta */
+.nl-wrap,
+#nl-badge,
+#nl-card {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
