@@ -45,6 +45,32 @@ const ogImage = "/images/og-share-el-guri.jpg"; // Imagen que se mostrará en Wh
 		
 		<slot />
 
+<!-- Eliminar Badge de Netlify dinámicamente -->
+<script is:inline>
+  function removeNetlifyBadge() {
+    const wrap = document.querySelector('.nl-wrap');
+    const badge = document.getElementById('nl-badge');
+    const card = document.getElementById('nl-card');
+
+    if (wrap) wrap.remove();
+    if (badge) badge.remove();
+    if (card) card.remove();
+  }
+
+  // Ejecutar inmediatamente cuando carga el DOM
+  document.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+
+  // Observador por si Netlify lo inyecta unos milisegundos después
+  const observer = new MutationObserver(() => {
+    if (document.querySelector('.nl-wrap') || document.getElementById('nl-badge')) {
+      removeNetlifyBadge();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+</script>
+
+
 	</body>
 </html>
 
